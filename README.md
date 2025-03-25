@@ -19,9 +19,13 @@ Personal portfolio site completed for Codecademy's Front-End Engineer Career Pat
 
 ## Features
 
+### Responsive Design
+
 ### NavBar Color Change on Scroll using JavaScript
 
-### Responsive Design
+### Mobile NavBar Dropdown Menu Toggle using JavaScript 
+
+### Section Headers entry animation on scroll
 
 ## How-To-Use
 
