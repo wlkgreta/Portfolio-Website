@@ -5,35 +5,111 @@
 
 html {
     font-size: 16px;
-    font-family: "Nunito Sans", sans-serif;
-    background-image: url('./resources/images/desktop-background-image2.jpg');
-    background-attachment: fixed;
-    background-repeat: repeat;
+    width: 100%;
+    background-color: var(--color-bg);
+    scroll-padding-top: 6rem;
 }
 
 body {
     width: 100%;
 }
 
-
-/*Fonts*/
-.nunito-sans {
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100,
-      "YTLC" 500;
+main {
+    padding-top: 7rem;
 }
 
-.reenie-beanie-regular {
-    font-family: "Reenie Beanie", cursive;
+/* Data Theme Color Schemes */
+
+[data-theme="light"] {
+    --color-bg: rgb(243, 174, 0);
+    --button-hover:  rgba(255, 255, 255, 0.5);
+    --nav-bg-color: #8F00FF;
+    --nav-link-color: white;;
+    --nav-link-hover: rgb(235, 194, 91);
+    --nav-border: 3px solid black;
+    --nav-scroll-shadow: black;
+    --dropdown-bg: teal;
+    --dropdown-hover: rgb(243, 174, 0);
+    --prof-fig-color: #fefefe;;
+    --prof-fig-hover: rgb(235, 194, 91); ;
+    --h1-color:  white;
+    --h1-shadow: 10px 4px 1px black;
+    --h2-color: black;
+    --about-button: black ;
+    --about-button-shadow: 4px 4px 1px rgb(231, 50, 50);
+    --about-button-border: rgb(223, 77, 77);
+    --projects-bg-color: rgb(223, 77, 77);
+    --project-wrapper-bg-color: white;
+    --project-wrapper-shadow: black;
+    --project-img-border: black;
+    --project-description: black;
+    --project-button: black;
+    --project-wrapper-border: black;
+    --project-button-border: #029c9c;
+    --project-button-shadow: 4px 4px 1px #027a7a;
+    --project-button-hover: rgb(236, 209, 209);
+    --footer-color: black;
+}
+
+[data-theme="cyberpunk"] {
+    --color-bg:  #1B1B2A;
+    --button-hover:  rgba(255, 255, 255, 0.2);
+    --nav-bg-color: #520172;
+    --nav-link-color: white;;
+    --nav-link-hover: #defe47;
+    --nav-border: 2px solid black;
+    --nav-scroll-shadow:  black;
+    --dropdown-bg: rgb(41, 167, 167);
+    --dropdown-hover:   #8709b9;
+    --prof-fig-color: #fefefe;;
+    --prof-fig-hover: #defe47;
+    --h1-color:  #05d9e8;
+    --h1-shadow: 5px 5px 15px teal;
+    --h2-color: white;
+    --about-button: white ;
+    --about-button-shadow: 5px 5px 15px 2px #b1073d;
+    --about-button-border:  #ff2a6d;
+    --projects-bg-color: #373647;
+    --project-wrapper-bg-color:#1B1B2A;
+    --project-wrapper-shadow: black;
+    --project-img-border:white;
+    --project-description: white;
+    --project-button: white ;
+    --project-wrapper-border: black;
+    --project-button-border: #ff2a6d ;
+    --project-button-shadow: 5px 5px 15px 2px #b1073d;
+    --project-button-hover: rgba(255, 255, 255, 0.2);
+    --footer-color: white;
+}
+
+h1 {
+    font-family: "Bowlby One", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--h1-color);
+    text-shadow: var(--h1-shadow);
+    -webkit-text-stroke: 2px black;
+}
+
+/* Fonts */
+
+.architects-daughter-regular {
+    font-family: "Architects Daughter", cursive;
     font-weight: 400;
     font-style: normal;
 }
+  
+.bowlby-one-regular {
+    font-family: "Bowlby One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-/*Keyframes*/
+  
+/* Keyframes */
 @keyframes appearOnLoad {
     0% {
       opacity: 0;
@@ -43,42 +119,28 @@ body {
     }
   }
 
-@keyframes slideInFromTop {
-   from {
-    transform: translateY(-100%);
-    opacity: 0;
-   }
-   to {
-    transform: translateY(0%);
-    opacity: 0.8;
-   }
-}
-
 /* Button Styling */
 button {
     margin: 2rem 1rem;
-    box-shadow: 4px 4px 1px #fefefe;
+    font-family: "Architects Daughter", cursive;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background-color: transparent;
+    padding: 1rem;
+    cursor: pointer;
 }
 
 button:hover {
     transform: translate(4px, 4px);
     transition: 0.3s all ease-in-out;
     box-shadow: none;
+    background-color: var(--button-hover);
 }
 
 button:active {
-    border: 2px solid rgb(185, 54, 185);
-    transform: translate(4px, 6px);
-    transition: 0.3s all linear;
-}
-
-/* Section header animations upon section entry */
-.no-animate {
-    animation: none;
-}
-
-.animate-header {
-    animation: slideInFromTop 2s;
+    transform: translate(4px, 8px);
+    background-color: var(--button-hover);
 }
 
 /* Header and Nav */
@@ -88,10 +150,17 @@ button:active {
     justify-content: space-around;
     align-items: center;
     transition: all 0.5s;
-    height: auto;
+    height: 6rem;
     width: 100%;
+    z-index: 10;
     position: fixed;
-    z-index: 2;
+    background-color: var(--nav-bg-color);
+    border-bottom: var(--nav-border);
+}
+
+#mobile-nav {
+    display: none;
+    visibility: hidden;
 }
 
 .logo-container a {
@@ -110,17 +179,18 @@ button:active {
 
 .nav-link {
     font-size: 1.2rem;
-    letter-spacing: 1px;
-    font-weight: 500;
+    font-family: "Architects Daughter", cursive;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-decoration: none;
-    color: #fefefe;
+    color: var(--nav-link-color);
     padding: 2rem;
     width: 5.5rem;
 }
 
 .nav-link:hover {
     font-size: 1.25rem;
-    color:#aae7aa;
+    color:var(--nav-link-hover);
     letter-spacing: 3px;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -135,7 +205,7 @@ button:active {
 
 .profile-figure {
     font-size: 2rem;
-    color: #fefefe;
+    color:var(--prof-fig-color);
     width: 5.5rem;
 }
 
@@ -149,43 +219,84 @@ button:active {
 }
 
 .profile-figure i:hover {
-    color:#aae7aa;
+    color: var(--prof-fig-hover);
     transform: translateY(-2px);
     cursor: pointer;
     transition: transform 0.2s, font-size 0.2s;
     font-size: 2.25rem;
 }
 
+/*Nav-Scroll*/
+
 .nav-scrolled {
-    background-color: rgba(125, 2, 141, 0.98);
-    border-bottom: 1px solid black;
-    box-shadow: 5px 10px 30px 2px black;
+    box-shadow: 5px 10px 30px 2px var(--nav-scroll-shadow);
 }
 
-.nav-scrolled .nav-link:hover {
-    font-size: 1.25rem;
-    color: #aae7aa;
-    transition: all 0.2s;
-    transform: translate(-2px, -2px);
-}
 
-.nav-scrolled .profile-figure i:hover {
-    color:  #aae7aa;;
-    transition: transform 0.2s, font-size 0.2s;
-}
+/*Toggle Switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(235, 194, 91);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #029c9c;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #defe47;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #defe47;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
 
-#mobile-nav {
-    display: none;
-    visibility: hidden;
-}
-
-.mobile-figures-container {
-    visibility: hidden;
-}
 
 /* About Section */
 #about-section {
-    font-family: "Nunito Sans", sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -193,15 +304,15 @@ button:active {
     height: auto;
     width: 100%;
     z-index: 2;
-    padding-top: 12rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid black;
-    box-shadow: 5px 10px 30px 2px black;
+    padding: 8rem 0 10rem 0;
+    border-bottom: 2px solid black;
+    scroll-margin-top: 6rem;
 }
 
 .about-text-container {
-    display: inline-flex;
-    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     max-width: 40%;
     height: auto;
     margin-left: 2rem;
@@ -209,48 +320,38 @@ button:active {
     animation: appearOnLoad 0.75s linear 0s;
 }
 
+.about-text {
+    display: flex;
+    font-family: "Bowlby One", sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
 .about-text h1 {
     font-size: 5rem;
-    letter-spacing: 2px;
-    margin-bottom: 0;
-    font-family: "Reenie Beanie", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: #fefefe;
 }
 
 .about-text h2 {
-    color: #aae7aa;
-    letter-spacing: 2px;
-    margin-top: 1rem;
-    margin-bottom: 0;
+    color: var(--h2-color);
+    letter-spacing: 3px;
+    font-weight: 400;
 }
 
-.about-text p {
-    margin-top: 2rem;
-    color: #fefefe;
-}
 
 .about-button {
     text-decoration: none;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #aae7aa;
-    background-color: transparent;
-    border: 2px solid #aae7aa;
-    margin-top: 2rem;
-    padding: 1rem;
+    color: var(--about-button);
+    box-shadow: var(--about-button-shadow);
+    border: 3px solid var(--about-button-border);
 }
 
-.about-button:active {
-    color: #fefefe;
-    transition: 0.2s all linear;
-}
 
 .about-button a {
     border: none;
+    box-shadow: none;
 }
 
 .headshot-container {
@@ -259,8 +360,7 @@ button:active {
     height: auto;
     overflow: hidden;
     margin-left: 5rem;
-    margin-right: 2rem;
-    margin-bottom: 10rem;    
+    margin-right: 2rem;    
 }
 
 .headshot-container img {
@@ -273,85 +373,59 @@ button:active {
 #projects-section {
     height: auto;
     width: 100%;
-    padding-top: 5rem;
-    border-bottom: 1px solid black;
-    box-shadow: 5px 10px 30px 2px black;
-}
-
-.projects-header-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    z-index: -1;
+    background-color: var(--projects-bg-color);
+    padding: 3rem 0;
+    border-bottom: 2px solid black;
 }
 
 .projects-header {
-    display: flex;
-    margin-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
 }
 
-.projects-header h1 {
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 5rem;
-    color:#aae7aa;
-    opacity: 0.8;
+.projects-header h1{
+    font-size: 3rem;
 }
 
 /*Project Figures*/
 .projects-container {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     height: auto;
     width: 100%;
-    margin: 5rem 0;
+    padding: 0;
 }
 
 .project-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+    justify-content: center;
+    max-width: 30rem;
     height: auto;
-    margin-bottom: 5rem; 
-    opacity: 0.75;
-}
-
-.project-wrapper:hover {
-    opacity: 1;
-}
-
-.project-photo {
-    justify-self: right;
-    margin: 0 2rem;
-    border-radius: 10px;
+    padding: 4rem 2rem 18rem 2rem;
+    background-color: var(--project-wrapper-bg-color);
+    box-shadow: 5px 20px 30px 2px var(--project-wrapper-shadow);
+    border: 1px solid var(--project-wrapper-border);
 }
 
 .project-photo img {
     height: auto;
-    max-width: 30rem;
-    box-shadow: 15px 15px 10px rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    border: 2px solid white;
-}
-
-.project-photo img:hover {
-    transform: translate(15px, 15px);
-    transition: 0.3s all ease-in-out;
-    box-shadow: none;
+    width: 27rem;
+    border: 2px solid var(--project-img-border);
 }
 
 .project-description {
-    color: #fff;
-    justify-self: left;
-    margin: 0 2rem;
+    font-family: "Architects Daughter", cursive;
+    color: var(--project-description);
+    text-align: center;
+    max-width: 27rem;
 }
 
 .project-description h2 {
-    color: #aae7aa;
     letter-spacing: 2px;
     margin-top: 2rem;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .project-description p {
@@ -360,188 +434,61 @@ button:active {
 
 .project-button {
     text-decoration: none;
+    color: var(--project-button);
+    border: 3px solid var(--project-button-border);
+    box-shadow: var(--project-button-shadow);
     font-size: 1.1rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #aae7aa;
-    background-color: transparent;
-    border: 2px solid #aae7aa;
     margin-top: 2rem;
-    padding: 1rem;
 }
 
-.project-button:active {
-    color: #fefefe;
+button.project-button:hover {
+    background-color: var(--project-button-hover);
+}
+
+button.project-button:active {
     transition: 0.2s all linear;
 }
 
 .project-button a {
     border: none;
-}
-
-/* Contact Section */
-#contact-section {
-    height: auto;
-    width: 100%;
-    padding-top: 5rem;
-}
-
-.contact-header-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    color:#aae7aa;
-}
-
-.contact-header {
-    display: flex;
-    margin-top: 3rem;
-}
-
-.contact-header h1 {
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 6rem;
-    opacity: 0.8;
-}
-
-.contact-subheading {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-}
-
-.contact-subheading h3 {
-    padding-top: 1rem;
-    color: #FEFDFF;
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 500;
-}
-
-.contact-form-info-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    z-index: 2;
-    padding-top: 5rem;
-}
-
-.contact-form-wrapper {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    max-width: 40%;
-    margin-bottom: 5rem;
-    margin-right: 5rem;
-}
-
-.contact-form-wrapper form {
-    padding: 2rem;
-    background-color: transparent;
-    border: none;
-    height: 30rem;
-}
-
-label {
-    color:rgba(255, 255, 255, 1);
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-input[type=text] {
-    color: #fefefe;
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    width: 100%;
-    background-color: transparent;
-    padding: 0.5rem 0.5rem;
-    margin: 1rem 0;
-    box-sizing: border-box;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom:1px solid rgba(255, 255, 255, 0.8);
-}
-
-textarea[type=text] {
-    color: #fefefe;
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: "Nunito Sans", sans-serif;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    background-color: transparent;
-    margin: 1rem 0;
-    box-sizing: border-box;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-#submit {
-    font-family: "Nunito Sans", sans-serif;
-    margin: 2rem 1rem;
-    box-shadow: 4px 4px 1px #fefefe;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-    font-weight: 600;
-    text-decoration: none;
-    color: #aae7aa;
-    background-color: transparent;
-    border: 2px solid #aae7aa;
-    padding: 1rem;
-}
-
-#submit:hover {
-    transform: translate(4px, 4px);
-    transition: 0.3s all ease-in-out;
     box-shadow: none;
 }
 
-#submit:active {
-    color: #fefefe;
-    border: 2px solid rgb(185, 54, 185);
-    transform: translate(4px, 6px);
-    transition: 0.3s all linear;
+/* Project 1*/
+.project-1 {
+    display: flex;
+    transform: rotate(-5deg);
 }
 
-.contact-info-wrapper {
-    display: inline-flex;
-    flex-wrap: wrap;
-    height: auto;
-    max-width: 40%;
-    margin-bottom: 2rem;
-    margin-left: 5rem;
+.project-1 .project-description {
+    position: absolute;
+    z-index: 1;
+    top: 31rem;
 }
 
-.contact-info h4 {
-    color: rgba(255, 255, 255, 1);
-    font-size: 1.25rem;
-    padding-bottom: 1.5rem;
+/*Project 2*/
+.project-2 {
+    display: flex;
+    transform: rotate(5deg);
 }
 
-.fa-location-dot {
-    font-size: 1.5rem;
-    margin-right: 1.25rem;
+.project-2 .project-description {
+    position: absolute;
+    z-index: 1;
+    top: 31rem;
 }
 
-.fa-phone {
-    font-size: 1.5rem;
-    margin-right: 1.25rem;
+/*Project 3*/
+
+.project-3 {
+    display: flex;
+    transform: rotate(-5deg);
 }
 
-.fa-envelope {
-    font-size: 1.5rem;
-    margin-right: 1.25rem;
+.project-3 .project-description {
+    position: absolute;
+    z-index: 1;
+    top: 31rem;
 }
 
 /* Footer */
@@ -549,30 +496,23 @@ textarea[type=text] {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 0.5rem;
+    height: auto;
+    padding: 2rem 0;
 }
 
 .footer-text {
-    display: inline-flex;
-    margin-right: 1rem;
-    color: #fefefe;
-    text-align: center;
+    font-family: "Architects Daughter", cursive;
+    display: flex;
+    color: var(--footer-color);
+    padding: 0 2rem;
 }
-
-.footer-attributions {
-    display: inline-flex;
-    margin-left: 1rem;
-    color: #fefefe;
-    text-align: center;
-    font-size: 0.75rem;
-}
-
 
 /* Responsive Media Queries */
 @media only screen and (max-width: 1120px) {
     #about-section {
-        padding-top: 10rem;
-        margin-bottom: 0;
+        padding-top: 8rem;
+        border-bottom: 2px solid black;
+        padding-bottom: 0;
     }
 
     .about-text-container {
@@ -590,49 +530,17 @@ textarea[type=text] {
         max-width: 80%;
     }
 
-    .project-wrapper {
-        display: flex;
+    .projects-container {
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
         text-align: center;
-        width: 100%;
         height: auto;
-        margin-bottom: 3rem; 
-        opacity: 1;
-    }
-    
-    .contact-form-wrapper {
-        max-width: 80%;
-        margin-right: 0;
     }
 
-    .contact-info-wrapper {
-        margin-left: 0;
-        max-width: 50%;
-    }
-    
-    .contact-info h4 {
-        font-size: 1rem;
-    }
-    
-    .fa-location-dot {
-        font-size: 1.25rem;
-    }
-    
-    .fa-phone {
-        font-size: 1.25rem;
-    }
-    
-    .fa-envelope {
-        font-size: 1.25rem;
-    }
 }
 
 /* Hamburger Nav Icon - Dropdown Menu */
 @media only screen and (max-width: 875px) {
-    html {
-        background-image: url('./resources/images/mobile-background-image.jpg');
-    }
     .logo-container {
         display: none;
     }
@@ -643,32 +551,39 @@ textarea[type=text] {
     }
     
     #mobile-nav {
-        visibility: visible;
         display: flex;
-        flex-wrap: wrap;
+        visibility: visible;
+        font-family: "Architects Daughter", cursive; 
+        font-weight: 700;
         justify-content: space-between;
         align-items: center;
         height: auto;
         width: 100%;
-        z-index: 2;
+        z-index: 10;
         position: fixed;
-        padding: 0.25rem 0;
+        padding: 0;
         transition: all 0.5s;
+    }
+
+    .mobile-nav {
+        background-color: var(--nav-bg-color);
+        border-bottom: 3px solid black;
     }
 
     .mobile-logo-container {
         display: flex;
         justify-content: left;
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 
     .mobile-logo-container img {
-        height: 5.5rem;
+        height: 5rem;
     }
 
     .dropdown-container {
         display: flex;
         justify-content: right;
+        align-items: center;
     }
     
     .dropdown-icon {
@@ -679,13 +594,14 @@ textarea[type=text] {
         background-color: inherit;
         font-family: inherit; 
         box-shadow: none;
-        margin-right: 3rem;
+        margin-right: 2rem;
     }
 
     .dropdown-icon:hover {
         cursor: pointer;
         transform: none;
         transition: none;
+        background-color: transparent;
     }
 
     .dropdown-icon:active {
@@ -695,10 +611,10 @@ textarea[type=text] {
     .dropdown-content {
         display: flex;
         height: 0;
-        background-color: rgb(223, 77, 77);
+        background-color: var(--dropdown-bg);
         position: absolute;
         width: 100%;
-        top: 80px;
+        top: 105px;
         z-index: 1;
         overflow: hidden;
         margin-top: 1.25rem;
@@ -707,8 +623,7 @@ textarea[type=text] {
 
     .dropdown-content.active {
         height: 245px;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
     }
 
     .dropdown-content ul {
@@ -745,9 +660,9 @@ textarea[type=text] {
     }
 
     .dropdown-item a:hover {
-        color: black;
+        color:  var(--dropdown-hover);
         cursor: pointer;
-        transition: color 0.2s;
+        transition: none;
     }
 
     .mobile-figures {
@@ -756,7 +671,7 @@ textarea[type=text] {
     }
 
     .profile-figure i:hover {
-        color: black;
+        color: var(--dropdown-hover);
     }
 
     .fa-linkedin {
@@ -769,12 +684,49 @@ textarea[type=text] {
         padding: 1rem;
     }
 
+
+    #about-section {
+        padding-top: 6rem;
+    }
+
+    .about-text h2 {
+        margin: 1rem 0;
+    }
+    
+    .project-wrapper {
+        max-width: 25rem;
+        font-size: 0.9rem;
+    }
+    
+    .project-photo img {
+        width: 22rem;
+    }
+    
+    .project-description {
+        max-width: 22rem;
+    }
+
+    .project-button {
+        font-size: 0.9rem;
+    }
+
+    .project-1 .project-description {
+        top: 26rem;
+    }
+    
+    .project-2 .project-description {
+        top: 26rem;
+    }
+    
+    .project-3 .project-description {
+        top: 26rem;
+    }
 }
 
 @media only screen and (max-width: 575px) {
     .about-button {
         margin: 1rem 0.5rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .about-text h1 {
@@ -794,60 +746,11 @@ textarea[type=text] {
         margin-top: 1rem;
     }
 
-    .projects-header h1 {
-        font-size: 3rem;
-    }
-
-    .project-photo {
-        justify-self: center;
-    }
-    
-    .project-photo img {
-        max-width: 20rem;
-    }
-
-    .project-button {
-        margin: 1rem 0.5rem;
-        font-size: 0.9rem;
-    }
-
-    .project-description h2 {
-        font-size: 1.25rem;
-    }
-
-    .project-description p {
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .contact-header h1 {
-        font-size: 3rem;
-    }
-
-    .contact-subheading {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .contact-subheading h3 {
-        font-size: 1rem;
-    }
-
-    .contact-form-wrapper {
-        max-width: 90%;
-    }
-
-    .contact-info-wrapper {
-        max-width: 60%;
-    }
-    
 }
 
 @media only screen and (max-width: 375px) {
     #about-section {
-        padding-top: 8rem;
+        padding-top: 5rem;
     }
 
     .about-text h1 {
@@ -859,10 +762,6 @@ textarea[type=text] {
     }
     
     .projects-header h1 {
-        font-size: 2rem;
-    }
-
-    .contact-header h1 {
         font-size: 2rem;
     }
 
