@@ -1,172 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whitney Greta | Front-End Developer</title>
     <link rel="icon" type="image/x-icon" href="./resources/images/W.png">
     <link href="./style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Londrina+Shadow&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a3865e2cde.js" crossorigin="anonymous"></script>
     <script src="./index.js" defer></script>
 </head>
+    <body id="homepage">
+        <!--Nav/Header-->
+        <header>
+            <nav id="nav" class="nav">
+                <div class="logo-container">
+                    <a href=#intro><img src="./resources/images/W.png"></a>
+                </div>
+                <div class="nav-items-container">
+                    <a class="nav-link" href="#about-section">about</a>
+                    <a class="nav-link" href="#projects-section">projects</a>
+                    <a class="nav-link" href="#contact-section">contact</a>
+                    <a class="profile-figure" href="https://linkedin.com/in/whitney-greta" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a class="profile-figure" href="https://github.com/wlkgreta" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <label class="switch">
+                        <input type="checkbox" id="data-theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </nav>
+        <!--Mobile Nav/Header-->
+            <nav id="mobile-nav" class="mobile-nav">
+                <div class="mobile-logo-container">
+                    <a href=#intro><img src="./resources/images/W.png"></a>
+                </div>
+                <div class="dropdown-container">
+                    <label class="switch">
+                        <input type="checkbox" id="mobile-data-theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <button class="dropdown-icon">
+                        <i class="fa-solid fa-bars fa-2xl" style="color: #f4f6f0;"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li class="dropdown-item"><a href="#about-section">about</a></li>
+                            <li class="dropdown-item"><a href="#projects-section">projects</a></li>
+                            <li class="dropdown-item"><a href="mailto:wknightly22@gmail.com">contact</a></li>
+                            <div class="mobile-figures">
+                                <li><a class="profile-figure" href="https://linkedin.com/in/whitney-greta" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a class="profile-figure" href="https://github.com/wlkgreta" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                            </div>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-<body id="homepage">
-    <!--Nav/Header-->
-    <header>
-        <nav id="nav" class="nav">
-            <div class="logo-container">
-                <a href=#intro><img src="./resources/images/W.png"></a>
-            </div>
-            <div class="nav-items-container">
-                <a class="nav-link" href="#about-section">about</a>
-                <a class="nav-link" href="#projects-section">projects</a>
-                <a class="nav-link" href="#contact-section">contact</a>
-                <a class="profile-figure" href="https://linkedin.com/in/whitney-greta" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a class="profile-figure" href="https://github.com/wlkgreta" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-            </div>
-        </nav>
-    <!--Mobile Nav/Header-->
-        <nav id="mobile-nav" class="mobile-nav">
-            <div class="mobile-logo-container">
-                <a href=#intro><img src="./resources/images/W.png"></a>
-            </div>
-            <div class="dropdown-container">
-                <button class="dropdown-icon">
-                     <i class="fa-solid fa-bars fa-2xl" style="color: #f4f6f0;"></i>
-                 </button>
-                 <div class="dropdown-content">
-                    <ul>
-                        <li class="dropdown-item"><a href="#about-section">about</a></li>
-                        <li class="dropdown-item"><a href="#projects-section">projects</a></li>
-                        <li class="dropdown-item"><a href="#contact-section">contact</a></li>
-                        <div class="mobile-figures">
-                            <li><a class="profile-figure" href="https://linkedin.com/in/whitney-greta" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                            <li><a class="profile-figure" href="https://github.com/wlkgreta" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                        </div>
-                    </ul> 
-                 </div>
-             </div>
-        </nav>
-    </header>
-
-    <main>
-    <!--About Section-->
-        <section id="about-section">
-            <div class="about-text-container">
-                <div class="about-text">
-                    <h1>Hi, I'm Whitney</h1>
-                    <h2>Front-End Developer</h2>
-                    <p>I'm new to the web development world and am currently taking classes through Codecademy's Front-End Engineer Path. I previously worked in the craft beer industry for 9 years, most recently as a sales representative for a local brewery. I am now in the process of an exciting career change!</p>
-                    <button class="about-button"><a class="about-button" href="">portfolio</a></button>
+        <main>
+        <!--About Section-->
+            <section id="about-section">
+                <div class="about-text-container">
+                    <div class="about-text">
+                        <h1>Whitney Greta</h1>
+                        <h2>Front-End Developer</h2>
+                    </div>
+                    <button class="about-button"><a class="about-button" href="mailto:wknightly22@gmail.com">contact</a></button>
                     <button class="about-button"><a class="about-button" href="">download resume</a></button>
                 </div>
-            </div>
-            <div class="headshot-container">
-                <img src="./resources/images/gritty2.png" alt="">
-            </div>
-        </section>
-    <!--Projects Section-->
-        <section id="projects-section">
-            <div class="projects-header-container">
+                <div class="headshot-container">
+                    <img src="./resources/images/gritty2.png" alt="">
+                </div>
+            </section>
+        <!--Projects Section-->
+            <section id="projects-section">
                 <div class="projects-header">
-                    <h1 class="no-animate">Projects</h1>
+                    <h1>Recent Projects</h1>
                 </div>
-            </div>
-            <div class="projects-container">
-                <div class="project-wrapper">
-                    <div class="project-photo">
-                        <img src="./resources/images/gritty1.jpg" alt="">
+                <div class="projects-container">
+                    <div class="project-wrapper project-1">
+                        <div class="project-photo">
+                            <img src="./resources/images/gritty1.jpg" alt="">
+                        </div>
+                        <div class="project-description">
+                            <h2>Embark Performance Training</h2>
+                            <p>Description & Languages Used</p>
+                            <button class="project-button"><a class="project-button" href="https://github.com/wlkgreta/Responsive-Club-Website" target="_blank">view code</a></button>
+                            <button class="project-button"><a class="project-button" href="" target="_blank">view site</a></button>
+                        </div>
                     </div>
-                    <div class="project-description">
-                        <h2>Embark Performance Training</h2>
-                        <p>Description & Languages Used</p>
-                        <button class="project-button"><a class="project-button" href="https://github.com/wlkgreta/Responsive-Club-Website" target="_blank">View Code</a></button>
-                        <button class="project-button"><a class="project-button" href="" target="_blank">View Site</a></button>
+                    <div class="project-wrapper project-2">
+                        <div class="project-photo">
+                            <img src="./resources/images/gritty2.jpg" alt="">
+                        </div>
+                        <div class="project-description">
+                            <h2>Jammming Codecademy Project</h2>
+                            <p>Description & Languages Used</p>
+                            <button class="project-button"><a class="project-button" href="https://github.com/wlkgreta/Responsive-Club-Website" target="_blank">view code</a></button>
+                            <button class="project-button"><a class="project-button" href="" target="_blank">view site</a></button>
+                        </div>
+                    </div>
+                    <div class="project-wrapper project-3">
+                        <div class="project-photo">
+                            <img src="./resources/images/gritty03.jpg" alt="">
+                        </div>
+                        <div class="project-description">
+                            <h2>Reddit Client Codecademy Project</h2>
+                            <p>Description & Languages Used</p>
+                            <button class="project-button"><a class="project-button" href="https://github.com/wlkgreta/Tea-Cozy-Project" target="_blank">view code</a></button>
+                            <button class="project-button"><a class="project-button" href="" target="_blank">view site</a></button>
+                        </div>
                     </div>
                 </div>
-                <div class="project-wrapper">
-                    <div class="project-photo">
-                        <img src="./resources/images/gritty2.jpg" alt="">
-                    </div>
-                    <div class="project-description">
-                        <h2>Jammming Codecademy Project</h2>
-                        <p>Description & Languages Used</p>
-                        <button class="project-button"><a class="project-button" href="https://github.com/wlkgreta/Responsive-Club-Website" target="_blank">View Code</a></button>
-                        <button class="project-button"><a class="project-button" href="" target="_blank">View Site</a></button>
-                    </div>
-                </div>
-                <div class="project-wrapper">
-                    <div class="project-photo">
-                        <img src="./resources/images/gritty03.jpg" alt="">
-                    </div>
-                    <div class="project-description">
-                        <h2>Reddit Client Codecademy Project</h2>
-                        <p>Description & Languages Used</p>
-                        <button class="project-button"><a class="project-button" href="https://github.com/wlkgreta/Tea-Cozy-Project" target="_blank">View Code</a></button>
-                        <button class="project-button"><a class="project-button" href="" target="_blank">View Site</a></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!--Contact Section-->
-        <section id="contact-section">
-            <div class="contact-header-container">    
-                <div class="contact-header">
-                    <h1 class="no-animate">Contact</h1>
-                </div>
-            </div>
-            <br>
-            <div class="contact-subheading">
-                <h3>For Project Inquiries and Quotes - send me a note!</h3>
-            </div>
-            <div class="contact-form-info-container">
-                <div class="contact-form-wrapper">
-                    <form action="" method="">
-                        <label for="first-name">First Name</label>
-                        <input type="text" name="first-name" id="first-name" required>
-                        <label for="last-name">Last Name</label>
-                        <input type="text" name="last-name" id="last-name" required>
-                        <br>
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" required>
-                        <br>
-                        <label for="message">Message</label>
-                        <br>
-                        <textarea type="text" name="message" id="message" maxlength="250" rows="3" cols="30" required></textarea>
-                        <br>
-                        <input type="submit" id="submit" value="Send Message">
-                    </form>
-                </div>
-                <div class="contact-info-wrapper">
-                    <div class="contact-info">
-                        <h4><i class="fa-solid fa-location-dot"></i>Des Moines, IA</h4>
-                        <br>
-                        <h4><i class="fa-solid fa-phone"></i>913-787-2200</h4>
-                        <br>
-                        <h4><i class="fa-solid fa-envelope"></i>wknightly22@gmail.com</h4>
-                        <div class="mobile-figures-container">
-                            <a class="mobile-figure" href=""><i class="fa-brands fa-linkedin"></i></a>
-                            <a class="mobile-figure" href=""><i class="fa-brands fa-github"></i></a>
-                        </div>      
-                    </div>      
-                </div>
+            </section>
+        </main>
+    <!--Footer-->
+        <section id="footer">
+            <div class="footer-text">
+                <p>Designed and Built by Whitney Greta - 2025</p>
             </div>
         </section>
-    </main>
-<!--Footer-->
-    <section id="footer">
-        <div class="footer-text">
-            <p>Designed and Built by Whitney Greta - 2025</p>
-        </div>
-        <div class="footer-attributions">
-            <p><a href="http://www.freepik.com">Background Image designed by Freepik</a></p>
-        </div>
-    </section>
-</body>
+    </body>
 </html>
