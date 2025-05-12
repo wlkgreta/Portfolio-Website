@@ -1,4 +1,4 @@
-//Gives Nav Bar a background color when scrolling
+//Gives Nav Bar a lower shadow when scrolling
     const navEl = document.querySelector('.nav');
 
     window.addEventListener('scroll', () => {
@@ -8,7 +8,8 @@
             navEl.classList.remove('nav-scrolled');
         }
     });
-
+    
+//Mobile Scroll Shadow
     const mobileNavEl = document.querySelector('.mobile-nav');
 
     window.addEventListener('scroll', () => {
@@ -22,26 +23,33 @@
 
 //Mobile Nav-Bar Dropdown Menu
 
-    let navIconClick = document.querySelector('.dropdown-icon');
+   const navIconClick = document.querySelector('.dropdown-icon');
 
-    navIconClick.onclick = function() {
-        navBar = document.querySelector('.dropdown-content');
+    navIconClick.addEventListener('click', () => {
+        let navBar = document.querySelector('.dropdown-content');
         navBar.classList.toggle('active');
-    }
+    });
 
-//Section Headers entry animation on scroll 
-    const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        const square = entry.target.querySelector('.no-animate');
+//Toggle Switch to change site color schemes
 
-        if (entry.isIntersecting) {
-        square.classList.add('animate-header');
-        return;
+    const toggle = document.getElementById('data-theme-toggle');
+    const htmlElement = document.querySelector('html');
+
+    toggle.addEventListener('click', () => {
+        if(htmlElement.getAttribute('data-theme') === 'light') {
+            htmlElement.setAttribute('data-theme', 'cyberpunk');
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
         }
-        square.classList.remove('animate-header');
-    });
     });
 
-    observer.observe(document.getElementById('projects-section'));
-    observer.observe(document.getElementById('contact-section'));
-    
+//Toggle Switch for Mobile
+    const mobileToggle = document.getElementById('mobile-data-theme-toggle');
+
+    mobileToggle.addEventListener('click', () => {
+        if(htmlElement.getAttribute('data-theme') === 'light') {
+            htmlElement.setAttribute('data-theme', 'cyberpunk');
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+        }
+    });
