@@ -52,12 +52,12 @@ main {
 }
 
 [data-theme="cyberpunk"] {
-    --color-bg:  #1B1B2A;
-    --button-hover:  rgba(255, 255, 255, 0.2);
+    --color-bg:  #000000;
+    --button-hover:  rgba(255, 255, 255, 0.1);
     --nav-bg-color: #520172;
     --nav-link-color: white;;
     --nav-link-hover: #defe47;
-    --nav-border: 2px solid black;
+    --nav-border: 3px solid black;
     --nav-scroll-shadow:  black;
     --dropdown-bg: rgb(41, 167, 167);
     --dropdown-hover:   #8709b9;
@@ -67,24 +67,24 @@ main {
     --h1-shadow: 5px 5px 15px teal;
     --h2-color: white;
     --about-button: white ;
-    --about-button-shadow: 5px 5px 15px 2px #b1073d;
-    --about-button-border:  #ff2a6d;
-    --projects-bg-color: #373647;
+    --about-button-shadow: 5px 5px 15px 2px #eb0fdc;
+    --about-button-border:  #FF10F0;
+    --projects-bg-color: #c73d69;
     --project-wrapper-bg-color:#1B1B2A;
     --project-wrapper-shadow: black;
     --project-img-border:white;
     --project-description: white;
     --project-button: white ;
     --project-wrapper-border: black;
-    --project-button-border: #ff2a6d ;
-    --project-button-shadow: 5px 5px 15px 2px #b1073d;
+    --project-button-border: #defe47;
+    --project-button-shadow: 5px 5px 15px 2px #a9c038;
     --project-button-hover: rgba(255, 255, 255, 0.2);
     --footer-color: white;
 }
 
 h1 {
     font-family: "Bowlby One", sans-serif;
-    font-size: 3rem;
+    font-size: 5rem;
     letter-spacing: 2px;
     font-weight: 400;
     font-style: normal;
@@ -330,9 +330,6 @@ button:active {
     height: auto;
 }
 
-.about-text h1 {
-    font-size: 5rem;
-}
 
 .about-text h2 {
     color: var(--h2-color);
@@ -381,10 +378,6 @@ button:active {
 .projects-header {
     padding-bottom: 4rem;
     text-align: center;
-}
-
-.projects-header h1{
-    font-size: 3rem;
 }
 
 /*Project Figures*/
@@ -521,7 +514,7 @@ button.project-button:active {
         margin: 0;
     }
 
-    .about-text h1 {
+    h1 {
         font-size: 4rem;
     }
     
@@ -693,6 +686,9 @@ button.project-button:active {
         margin: 1rem 0;
     }
     
+    .projects-header h1 {
+        margin: 0 1rem;
+    }
     .project-wrapper {
         max-width: 25rem;
         font-size: 0.9rem;
@@ -729,7 +725,7 @@ button.project-button:active {
         font-size: 1rem;
     }
 
-    .about-text h1 {
+    h1 {
         font-size: 3rem;
     }
     
@@ -748,17 +744,19 @@ button.project-button:active {
 
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
     #about-section {
         padding-top: 5rem;
+        width: 100%;
     }
 
-    .about-text h1 {
+    h1 {
         font-size: 2.9rem;
     }
     
     #projects-section {
         margin-top: 2rem;
+        width: 100%;
     }
     
     .projects-header h1 {
