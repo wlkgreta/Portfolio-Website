@@ -25,8 +25,6 @@ Personal portfolio site completed for Codecademy's Front-End Engineer Career Pat
 
 + Mobile NavBar Dropdown Menu ('hamburger' button) - Toggle Feature using JavaScript 
 
-+ Section Headers Entry Animation on Scroll using JavaScript
-
 ## How-To-Use
 
 ## Technologies
