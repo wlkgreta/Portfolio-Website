@@ -18,6 +18,23 @@ main {
     padding-top: 7rem;
 }
 
+h1 {
+    font-family: "Bowlby One", sans-serif;
+    font-size: 5rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--h1-color);
+    text-shadow: var(--h1-shadow);
+    -webkit-text-stroke: 2px black;
+    flex-wrap: wrap;
+}
+
+p {
+    font-family: "Funnel Sans", sans-serif;
+}
+
 /* Data Theme Color Schemes */
 
 [data-theme="light"] {
@@ -80,19 +97,6 @@ main {
     --project-button-shadow: 5px 5px 15px 2px #a9c038;
     --project-button-hover: rgba(255, 255, 255, 0.2);
     --footer-color: white;
-}
-
-h1 {
-    font-family: "Bowlby One", sans-serif;
-    font-size: 5rem;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-    color: var(--h1-color);
-    text-shadow: var(--h1-shadow);
-    -webkit-text-stroke: 2px black;
-    flex-wrap: wrap;
 }
 
 /* Fonts */
@@ -615,7 +619,7 @@ button.project-button:active {
         top: 105px;
         z-index: 1;
         overflow: hidden;
-        margin-top: 1.25rem;
+        margin-top: 1.1rem;
         transition: 0.5s;
     }
 
