@@ -96,11 +96,11 @@ h1 {
 }
 
 /* Fonts */
-
-.architects-daughter-regular {
-    font-family: "Architects Daughter", cursive;
-    font-weight: 400;
-    font-style: normal;
+.funnel-sans-portfolio {
+  font-family: "Funnel Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
   
 .bowlby-one-regular {
@@ -123,7 +123,7 @@ h1 {
 /* Button Styling */
 button {
     margin: 2rem 1rem;
-    font-family: "Architects Daughter", cursive;
+    font-family: "Funnel Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 3px;
@@ -180,7 +180,7 @@ button:active {
 
 .nav-link {
     font-size: 1.2rem;
-    font-family: "Architects Daughter", cursive;
+    font-family: "Funnel Sans", sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
     text-decoration: none;
@@ -409,7 +409,7 @@ button:active {
 }
 
 .project-description {
-    font-family: "Architects Daughter", cursive;
+    font-family: "Funnel Sans", sans-serif;
     color: var(--project-description);
     text-align: center;
     max-width: 27rem;
@@ -498,7 +498,7 @@ button.project-button:active {
 }
 
 .footer-text {
-    font-family: "Architects Daughter", cursive;
+    font-family: "Funnel Sans", sans-serif;
     display: flex;
     color: var(--footer-color);
     padding: 0 2rem;
@@ -551,7 +551,7 @@ button.project-button:active {
     #mobile-nav {
         display: flex;
         visibility: visible;
-        font-family: "Architects Daughter", cursive; 
+        font-family: "Funnel Sans", sans-serif;
         font-weight: 700;
         justify-content: space-between;
         align-items: center;
@@ -782,7 +782,7 @@ button.project-button:active {
 
     .project-button {
     margin: 2rem 0.4rem;
-}
+    }
 }
 
 @media only screen and (max-width: 400px) {
