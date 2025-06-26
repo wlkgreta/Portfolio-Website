@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whitney Greta | Front-End Developer</title>
-    <link rel="icon" type="image/x-icon" href="./resources/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="./resources/images/Logo (1).png">
     <link href="./style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
     <script src="./index.js" defer></script>
 </head>
     <body id="homepage">
-        <!--Nav/Header-->
+        <!--NAV/HEADER-->
         <header>
             <nav id="nav" class="nav">
                 <div class="logo-container">
@@ -24,6 +24,7 @@
                 <div class="nav-items-container">
                     <a class="nav-link" href="#about-section">about</a>
                     <a class="nav-link" href="#projects-section">projects</a>
+                    <a class="nav-link" href="">resume</a>
                     <a class="nav-link" href="#contact-section">contact</a>
                     <a class="profile-figure" href="https://linkedin.com/in/whitney-greta" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a class="profile-figure" href="https://github.com/wlkgreta" target="_blank"><i class="fa-brands fa-github"></i></a></li>
@@ -33,7 +34,7 @@
                     </label>
                 </div>
             </nav>
-        <!--Mobile Nav/Header-->
+        <!--MOBILE NAV/HEADER-->
             <nav id="mobile-nav" class="mobile-nav">
                 <div class="mobile-logo-container">
                     <a href=#intro><img src="./resources/images/logo.png"></a>
@@ -50,6 +51,7 @@
                         <ul>
                             <li class="dropdown-item"><a href="#about-section">about</a></li>
                             <li class="dropdown-item"><a href="#projects-section">projects</a></li>
+                            <li class="dropdown-item"><a href="">resume</a></li>
                             <li class="dropdown-item"><a href="mailto:wknightly22@gmail.com">contact</a></li>
                             <div class="mobile-figures">
                                 <li><a class="profile-figure" href="https://linkedin.com/in/whitney-greta" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
@@ -62,26 +64,40 @@
         </header>
 
         <main>
-        <!--About Section-->
+        <!--ABOUT SECTION-->
             <section id="about-section">
                 <div class="about-text-container">
                     <div class="about-text">
                         <h1>Whitney Greta</h1>
                         <h2>Front-End Developer</h2>
-                        <!--<p>Hi, I'm Whitney! I'm a front-end developer based in Des Moines, IA. 
-                            
-                            I previously worked in the craft beer industry for 10 years, most recently as a sales representative for a local brewery. I am customer-focused and communication skills strong attention to detail. love solving puzzles.
-                            
-                            In my free time, I enjoy doing puzzles with my husband while watching Survivor, playing video games, biking to breweries, and doing crosswords while cuddling with my cats.</p> -->
+                    </div>
+                    <button id="openModal" class="about-button">about me</button>
+                    <div id="modal" class="modal">
+                        <div class="modal-inner">
+                            <h1>Hi, I'm Whitney!</h1>
+                            <br>
+                            <p>
+                                I'm a front-end developer based in Des Moines, IA.
+                                <br>
+                                <br> 
+                                I previously worked in the craft beer industry for 10 years, most recently as a sales representative for a local brewery. My interest in coding actually began during the pandemic when I was working as an Account & Brand manager for another brewery and helped consult on their new website design. I was hooked.
+                                <br>
+                                <br>
+                                So at the start of 2024 I finally took the plunge and started taking classes on Codecademy. In early 2025, I earned my Front-End Engineer certificate and since then, I have been working on projects to continue learning and honing my skills. In addition to my love for puzzles and problem-solving, my experiences working in sales and brand management have given me a unique understanding when it comes to meeting client needs, including effective communication skills and a strong attention to detail.
+                                <br>
+                                <br> 
+                                In my free time, I enjoy doing puzzles with my husband while watching Survivor, playing video games, biking to breweries, and doing crosswords while cuddling with my cats.
+                            </p>
+                            <button id="closeModal">Close</button>
+                        </div>
                     </div>
                     <button class="about-button"><a class="about-button" href="mailto:wknightly22@gmail.com">contact</a></button>
-                    <button class="about-button"><a class="about-button" href="">download resume</a></button>
                 </div>
-                <div class="headshot-container">
-                    <img src="./resources/images/gritty2.png" alt="">
-                </div>
+                <!--<div class="headshot-container">
+                    <img src="./resources/images/PNG2.png" alt="">
+                </div>-->
             </section>
-        <!--Projects Section-->
+        <!--PROJECTS SECTION-->
             <section id="projects-section">
                 <div class="projects-header">
                     <h1>Recent Projects</h1>
@@ -114,8 +130,8 @@
                             <img src="./resources/images/gritty03.jpg" alt="">
                         </div>
                         <div class="project-description">
-                            <h2>Reddit Client Codecademy Project</h2>
-                            <p>Description & Languages Used</p>
+                            <h2>Beer Fridge App</h2>
+                            <p>- In Production -</p>
                             <button class="project-button"><a class="project-button" href="https://github.com/wlkgreta/Tea-Cozy-Project" target="_blank">view code</a></button>
                             <button class="project-button"><a class="project-button" href="" target="_blank">view site</a></button>
                         </div>
@@ -123,10 +139,12 @@
                 </div>
             </section>
         </main>
-    <!--Footer-->
+    <!--FOOTER-->
         <section id="footer">
             <div class="footer-text">
-                <p>Designed and Built by Whitney Greta - 2025</p>
+                <p>Website Designed and Built by Whitney Greta - 2025</p>
+                <br>
+                <!--<p>Profile Avatar created by DreamPortraitCo on Etsy</p>-->
             </div>
         </section>
     </body>
