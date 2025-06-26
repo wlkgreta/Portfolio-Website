@@ -1,4 +1,4 @@
-//Gives Nav Bar a lower shadow when scrolling
+//GIVES NAV BAR A LOWER SHADOW WHEN SCROLLING
     const navEl = document.querySelector('.nav');
 
     window.addEventListener('scroll', () => {
@@ -9,7 +9,7 @@
         }
     });
     
-//Mobile Scroll Shadow
+//MOBILE SCROLL SHADOW
     const mobileNavEl = document.querySelector('.mobile-nav');
 
     window.addEventListener('scroll', () => {
@@ -21,7 +21,7 @@
     });
 
 
-//Mobile Nav-Bar Dropdown Menu
+//MOBILE NAV-BAR DROPDOWN MENU
 
    const navIconClick = document.querySelector('.dropdown-icon');
 
@@ -30,7 +30,7 @@
         navBar.classList.toggle('active');
     });
 
-//Toggle Switch to change site color schemes
+//TOGGLE SWITCH TO CHANGE SITE COLOR SCHEMES
 
     const toggle = document.getElementById('data-theme-toggle');
     const htmlElement = document.querySelector('html');
@@ -43,7 +43,7 @@
         }
     });
 
-//Toggle Switch for Mobile
+//TOGGLE SWITCH FOR MOBILE
     const mobileToggle = document.getElementById('mobile-data-theme-toggle');
 
     mobileToggle.addEventListener('click', () => {
@@ -53,3 +53,16 @@
             htmlElement.setAttribute('data-theme', 'light');
         }
     });
+
+//MODAL
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.getElementById('closeModal');
+    const modal = document.getElementById('modal');
+
+    openBtn.addEventListener('click', () => {
+        modal.classList.add('open');
+    })
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('open');
+    })
