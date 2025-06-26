@@ -804,7 +804,7 @@ button.project-button:active {
 
 @media only screen and (max-width: 575px) {
     #about-section {
-        padding-top: 13rem;
+        padding-top: 10rem;
         padding-bottom: 13rem;
     }
    
