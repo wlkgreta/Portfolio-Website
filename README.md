@@ -23,14 +23,6 @@ Personal portfolio site completed for Codecademy's Front-End Engineer Career Pat
 
 + NavBar Color Change on Scroll using JavaScript
 
-+ Mobile NavBar Dropdown Menu ('hamburger' button) - Toggle Feature using JavaScript 
++ Mobile NavBar Dropdown Menu ('hamburger' button) - Toggle Feature using JavaScript
 
-## How-To-Use
-
-## Technologies
-
-## Collaborators
-
-## License
-
-## Acknowledgements
++ "Light" and "Dark" version toggle 
