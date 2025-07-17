@@ -7,7 +7,7 @@ html {
     font-size: 16px;
     width: 100%;
     background-color: var(--color-bg);
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 96px;
 }
 
 body {
@@ -27,11 +27,11 @@ h1 {
     text-transform: uppercase;
     color: var(--h1-color);
     text-shadow: var(--h1-shadow);
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: var(--text-stroke);
     flex-wrap: wrap;
 }
 
-p {
+p, h2 {
     font-family: "Funnel Sans", sans-serif;
 }
 
@@ -51,10 +51,12 @@ p {
     --prof-fig-hover: rgb(235, 194, 91); ;
     --h1-color:  white;
     --h1-shadow: 10px 4px 1px black;
+    --text-stroke: 2px black;
     --h2-color: black;
     --about-button: black ;
     --about-button-shadow: 4px 4px 1px rgb(231, 50, 50);
     --about-button-border: rgb(223, 77, 77);
+    --projects-section-border: black;
     --projects-bg-color: rgb(223, 77, 77);
     --project-wrapper-bg-color: white;
     --project-wrapper-shadow: black;
@@ -65,11 +67,17 @@ p {
     --project-button-border: #029c9c;
     --project-button-shadow: 4px 4px 1px #027a7a;
     --project-button-hover: rgb(236, 209, 209);
+    --contact-button: black;
+    --contact-text: black;
     --footer-color: black;
+    --modal-button: rgb(243, 174, 0);
+    --modal-shadow: rgb(20, 20, 20);
+    --modal-picture: url('./resources/images/whitney_headshot.png');
+    --modal-border: black;
 }
 
 [data-theme="cyberpunk"] {
-    --color-bg:  #000000;
+    --color-bg:  #0b080c;
     --button-hover:  rgba(255, 255, 255, 0.1);
     --nav-bg-color: #520172;
     --nav-link-color: white;;
@@ -80,23 +88,31 @@ p {
     --dropdown-hover:   #8709b9;
     --prof-fig-color: #fefefe;;
     --prof-fig-hover: #defe47;
-    --h1-color:  #05d9e8;
-    --h1-shadow: 5px 5px 15px teal;
+    --h1-color: black;
+    --h1-shadow: 4px 4px 1px #05d9e8;
+    --text-stroke: 2px #05d9e8;
     --h2-color: white;
     --about-button: white ;
-    --about-button-shadow: 5px 5px 15px 2px #eb0fdc;
-    --about-button-border:  #FF10F0;
-    --projects-bg-color: #c73d69;
-    --project-wrapper-bg-color:black;
+    --about-button-shadow: 4px 4px 1px #a9c038;
+    --about-button-border:  #defe47;
+    --projects-section-border: #e2346b;
+    --projects-bg-color: #0b080c;
+    --project-wrapper-bg-color:white;
     --project-wrapper-shadow: black;
-    --project-img-border:white;
-    --project-description: white;
-    --project-button: white ;
+    --project-img-border:black;
+    --project-description: black;
+    --project-button: black ;
     --project-wrapper-border: black;
-    --project-button-border: #defe47;
-    --project-button-shadow: 5px 5px 15px 2px #a9c038;
-    --project-button-hover: rgba(255, 255, 255, 0.2);
+    --project-button-border: #FF10F0;
+    --project-button-shadow: 4px 4px 1px #d80fcb;
+    --project-button-hover: rgb(187, 187, 187);
+    --contact-button: white ;
+    --contact-text: white;
     --footer-color: white;
+    --modal-button: #defe47;
+    --modal-shadow:  #8709b9;
+    --modal-picture: url('./resources/images/whitney_headshot_dark.png');
+    --modal-border: black;
 }
 
 /* FONTS */
@@ -126,13 +142,13 @@ p {
 
 /* BUTTON STYLING */
 button {
-    margin: 2rem 1rem;
+    margin: 32px 16px;
     font-family: "Funnel Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 3px;
     background-color: transparent;
-    padding: 1rem;
+    padding: 16px;
     cursor: pointer;
 }
 
@@ -151,11 +167,11 @@ button:active {
 /* HEADER AND NAV */
 #nav {
     display: flex;
-    padding: 0.5rem 0;
+    padding: 8px 0;
     justify-content: space-around;
     align-items: center;
     transition: all 0.5s;
-    height: 6rem;
+    height: 96px;
     width: 100%;
     z-index: 10;
     position: fixed;
@@ -173,7 +189,7 @@ button:active {
 }
 
 .logo-container img {
-    height: 5.5rem;
+    height: 88px;
 }
 
 .nav-items-container {
@@ -188,8 +204,8 @@ button:active {
     letter-spacing: 2px;
     text-decoration: none;
     color: var(--nav-link-color);
-    padding: 1.5rem;
-    width: 5.5rem;
+    padding: 24px;
+    width: 88px;
     text-align: center;
 }
 
@@ -211,16 +227,16 @@ button:active {
 .profile-figure {
     font-size: 2rem;
     color:var(--prof-fig-color);
-    width: 5.5rem;
+    width: 88px;
 }
 
 .fa-linkedin {
-    padding: 1rem;
-    margin: 0 1rem;
+    padding: 16px;
+    margin: 0 16px;
 }
 
 .fa-github {
-    padding: 1rem;
+    padding: 16px;
 }
 
 
@@ -310,9 +326,8 @@ button:active {
     height: auto;
     width: 100%;
     z-index: 2;
-    padding: 12rem 0 15rem 0;
-    border-bottom: 2px solid black;
-    scroll-margin-top: 6rem;
+    padding: 196px 0 240px 0;
+    scroll-margin-top: 96px;
 }
 
 .about-text-container {
@@ -321,8 +336,8 @@ button:active {
     text-align: center;
     max-width: 70%;
     height: auto;
-    margin-left: 2rem;
-    margin-right: 4rem;
+    margin-left: 16px;
+    margin-right: 64px;
     animation: appearOnLoad 0.75s linear 0s;
 }
 
@@ -341,7 +356,7 @@ button:active {
 .about-text h2 {
     color: var(--h2-color);
     letter-spacing: 3px;
-    font-weight: 400;
+    font-weight: 900;
 }
 
 
@@ -356,20 +371,20 @@ button:active {
 .about-button a {
     border: none;
     box-shadow: none;
+    padding: 0 35%;
 }
 
 /* MODAL */
 .modal {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    transition: all 0.3s ease-in-out;
     z-index: -1;
-
+    transition: background-color 0.1s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -378,74 +393,72 @@ button:active {
 .modal.open {
     opacity: 1;
     z-index: 10;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .modal-inner {
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 3px solid black;
-    box-shadow: 10px 10px 1px rgb(20, 20, 20);
-    padding: 50px;
-    width: 50rem;
+    background-color: rgba(255, 255, 255, 0.99);
+    border: 3px solid var(--modal-border);
+    box-shadow: 10px 10px 1px var(--modal-shadow);
     line-height: 24px;
-    margin: 10px 0;
+    width: 60%;
+    height: auto;
 }
 
-.modal-inner h1 {
-    font-size: 2.5rem;
-    text-shadow: 3px 4px 1px black;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    text-align: center;
+.modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-.modal-inner p {
-    text-align: left;
+.modal-content p {
+    padding: 2.5rem;
+}
+
+.modal-image {
+    min-height: 600px;
+    background-image: var(--modal-picture);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-left: 4px solid black;
+}
+
+.modal-button-container {
+    width: 100%;
+    text-align: right;
+    padding: 0;
 }
 
 .modal-inner button {
-    color: var(--project-button);
-    border: 3px solid var(--project-button-border);
-    box-shadow: var(--project-button-shadow);
-    font-size: 1.1rem;
-    margin-top: 2rem;
+    color: black;
+    border: 3px solid black;
+    background-color: var(--modal-button);
+    padding: 0 8px 3.2px 10.4px;
+    margin: 10px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .modal-inner button:hover {
-    transform: translate(4px, 4px);
-    transition: 0.3s all ease-in-out;
+    transform: none;
+    transition: none;
     box-shadow: none;
-    background-color: var(--button-hover);
+    background-color: white;
 }
 
-.headshot-container {
-    display: inline-flex;
-    max-width: 40%;
-    height: auto;
-    overflow: hidden;
-    margin-left: 5rem;
-    margin-right: 2rem;    
-}
-
-.headshot-container img {
-    max-height: 30rem;
-    max-width: 100%;
-    animation: appearOnLoad 0.75s linear 0s;
-    border-radius: 50%;
-    background-color: rgb(7, 173, 131);
-    margin: 3rem 0 5rem 0;
-}
 
 /* PROJECTS SECTION */
 #projects-section {
     height: auto;
     width: 100%;
     background-color: var(--projects-bg-color);
-    padding: 3rem 0;
-    border-bottom: 2px solid black;
+    padding: 48px 0 128px 0;
+    border-top: 2px solid var(--projects-section-border);
+    border-bottom: 2px solid var(--projects-section-border);
 }
 
 .projects-header {
-    padding-bottom: 4rem;
+    padding-bottom: 64px;
     text-align: center;
 }
 
@@ -462,37 +475,37 @@ button:active {
 
 .project-wrapper {
     justify-content: center;
-    max-width: 30rem;
+    max-width: 480px;
     height: auto;
-    padding: 4rem 2rem 18rem 2rem;
+    padding: 64px 16px 325px 16px;
     background-color: var(--project-wrapper-bg-color);
     box-shadow: 5px 20px 30px 2px var(--project-wrapper-shadow);
     border: 1px solid var(--project-wrapper-border);
+    margin: 0 10px;
 }
 
 .project-photo img {
     height: auto;
-    width: 27rem;
-    border: 2px solid var(--project-img-border);
-    opacity: 0;
+    width: 432px;
+    border: 3px solid var(--project-img-border);
 }
 
 .project-description {
     font-family: "Funnel Sans", sans-serif;
     color: var(--project-description);
     text-align: center;
-    max-width: 27rem;
+    max-width: 432px;
 }
 
 .project-description h2 {
     letter-spacing: 2px;
-    margin-top: 2rem;
+    margin-top: 30px;
     margin-bottom: 0;
     text-align: center;
 }
 
 .project-description p {
-    margin-top: 1.5rem;
+    margin-top: 24px;
 }
 
 .project-button {
@@ -501,7 +514,7 @@ button:active {
     border: 3px solid var(--project-button-border);
     box-shadow: var(--project-button-shadow);
     font-size: 1.1rem;
-    margin-top: 2rem;
+    margin-top: 32px;
 }
 
 button.project-button:hover {
@@ -527,7 +540,7 @@ button.project-button:active {
 .project-1 .project-description {
     position: absolute;
     z-index: 1;
-    top: 31rem;
+    top: 496px;
 }
 
 /* PROJECT 2 */
@@ -540,7 +553,7 @@ button.project-button:active {
 .project-2 .project-description {
     position: absolute;
     z-index: 1;
-    top: 31rem;
+    top: 496px;
 }
 
 /* PROJECT 3 */
@@ -554,8 +567,87 @@ button.project-button:active {
 .project-3 .project-description {
     position: absolute;
     z-index: 1;
-    top: 31rem;
+    top: 496px;
 }
+
+/* CONTACT */
+
+.contact-header {
+    text-align: center;
+    height: auto;
+    width: 100%;
+    padding-top: 64px;
+}
+
+.contact-header h3 {
+    font-family: "Funnel Sans", sans-serif;
+    max-width: 592px;
+    justify-self: center;
+    margin: 16px;
+    font-weight: 500;
+    color: var(--contact-text);
+}
+
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    width: 320px;
+    padding: 80px;
+    margin-top: 32px;
+}
+
+.input {
+    margin: 12px;
+    padding: 16px;
+    width: 400px; 
+    border: 3px solid black;
+    box-shadow: 4px 4px 1px black;
+}
+
+.input::placeholder {
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 16px;
+}
+
+.message {
+    height: 128px;
+}
+
+.submit {
+    margin: 16px;
+    color: var(--contact-button);
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background-color: transparent;
+    border: 3px solid var(--about-button-border);
+    box-shadow: var(--about-button-shadow);
+    padding: 16px;
+    cursor: pointer;
+    width: 432px;
+}
+
+.submit:hover {
+    transform: translate(4px, 4px);
+    transition: 0.3s all ease-in-out;
+    box-shadow: none;
+    background-color: var(--button-hover);
+}
+
+.submit:active {
+    transform: translate(4px, 8px);
+    background-color: var(--button-hover);
+}
+
 
 /* FOOTER */
 #footer {
@@ -563,35 +655,59 @@ button.project-button:active {
     justify-content: center;
     width: 100%;
     height: auto;
-    padding: 2rem 0;
+    margin-top: 64px;
 }
 
 .footer-text {
     font-family: "Funnel Sans", sans-serif;
     color: var(--footer-color);
-    padding: 0 2rem;
+    padding: 0 32px;
+    font-size: 0.75rem;
 }
 
 /* RESPONSIVE MEDIA QUERIES */
-@media only screen and (max-width: 1120px) {
-    #about-section {
-        border-bottom: 2px solid black;
+@media only screen and (max-width: 1575px) {
+    .modal-inner {
+        width: 85%;
     }
+}
 
+@media only screen and (max-width: 1250px) {
+    .modal-inner {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
     .about-text-container {
         text-align: center;
         max-width: 80%;
         margin: 0;
     }
 
-    h1 {
-        font-size: 4rem;
+    .modal-inner {
+        width: 90%;
+        max-height: 80%;
+        overflow: auto;
     }
-    
-    .headshot-container {
+
+    .modal-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr;
+    }
+
+    .modal-content p {
         margin: 0;
-        max-width: 80%;
     }
+
+    .modal-image {
+        max-width: 100%;
+        max-height: 100%;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border-bottom: 4px solid black;
+    }
+
 
     .projects-container {
         flex-direction: column;
@@ -602,17 +718,21 @@ button.project-button:active {
     }
 
     .project-1 {
-        margin-top: 3rem;
+        margin-top: 48px;
     }
 
     .project-3 {
-        margin-bottom: 5rem;
+        margin-bottom: 80px;
     }
 
 }
 
 /* HAMBURGER NAV ICON - DROPDOWN MENU */
 @media only screen and (max-width: 950px) {
+    html {
+        font-size: 13px;
+    }
+
     .logo-container {
         display: none;
     }
@@ -645,11 +765,11 @@ button.project-button:active {
     .mobile-logo-container {
         display: flex;
         justify-content: left;
-        margin-left: 2rem;
+        margin-left: 32px;
     }
 
     .mobile-logo-container img {
-        height: 5rem;
+        height: 80px;
     }
 
     .dropdown-container {
@@ -659,14 +779,14 @@ button.project-button:active {
     }
     
     .dropdown-icon {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         border: none;
         outline: none;
         color: #d6d1ca;
         background-color: inherit;
         font-family: inherit; 
         box-shadow: none;
-        margin-right: 2rem;
+        margin-right: 32px;
     }
 
     .dropdown-icon:hover {
@@ -689,8 +809,9 @@ button.project-button:active {
         top: 105px;
         z-index: 1;
         overflow: hidden;
-        margin-top: 1.1rem;
+        margin-top: 17.6px;
         transition: 0.5s;
+        text-align: center;
     }
 
     .dropdown-content.active {
@@ -713,7 +834,7 @@ button.project-button:active {
     }
 
     .dropdown-content li {
-        font-size: 1.25rem;
+        font-size: 1.54rem;
         width: 100%;
         float: none;
         padding: 12px 16px;
@@ -722,7 +843,6 @@ button.project-button:active {
 
     .dropdown-item {
         border-bottom: 1px solid black;
-        text-align: center;
     }
 
 
@@ -748,135 +868,146 @@ button.project-button:active {
 
     .fa-linkedin {
         margin-left: 0;
-        padding: 1rem;
+        padding: 16px;
     }
     
     .fa-github {
         margin-right: 0;
-        padding: 1rem;
+        padding: 16px;
     }
 
     #about-section {
-        padding-top: 18rem;
-        padding-bottom: 18rem;
+        padding: 288px 0;
     }
 
     .about-text h2 {
-        margin: 1rem 0;
+        margin: 16px 0;
     }
     
+    #projects-section {
+        padding-bottom: 16px;
+    }
+
     .projects-container {
-        padding: 1rem 0 5rem 0;
+        padding: 16px 0 80px 0;
+    }
+
+    .projects-header {
+        padding-bottom: 16px;
     }
 
     .projects-header h1 {
-        margin: 0 1rem;
+        margin: 0 16px;
     }
     .project-wrapper {
-        max-width: 25rem;
-        font-size: 0.9rem;
+        max-width: 400px;
+        font-size: 1.1rem;
     }
     
     .project-photo img {
-        width: 22rem;
+        width: 352px;
     }
     
     .project-description {
-        max-width: 22rem;
+        max-width: 352px;
     }
 
     .project-button {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .project-1 .project-description {
-        top: 26rem;
+        top: 416px;
     }
     
     .project-2 .project-description {
-        top: 26rem;
+        top: 416px;
     }
     
     .project-3 .project-description {
-        top: 26rem;
+        top: 416px;
     }
 }
 
 @media only screen and (max-width: 575px) {
     #about-section {
-        padding-top: 10rem;
-        padding-bottom: 13rem;
+        padding-top: 160px;
+        padding-bottom: 208px;
     }
    
     .about-button {
-        margin: 1rem 0.5rem;
-        font-size: 1rem;
+        margin: 16px 8px;
+        font-size: 16px;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 56px;
     }
     
     .about-text h2 {
-        font-size: 1.25rem;
+        font-size: 20px;
     }
 
     .about-text p {
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
+        margin-bottom: 16px;
+        font-size: 14.4px;
     }
 
     .headshot-container {
-        margin-top: 1rem;
+        margin-top: 16px;
     }
 
     .project-wrapper {
-        max-width: 23rem;
-        font-size: 0.9rem;
+        max-width: 368px;
+        font-size: 14.4px;
     }
     
     .project-photo img {
-        width: 20rem;
+        width: 320px;
     }
     
     .project-description {
-        max-width: 20rem;
+        max-width: 320px;
     }
 
     .project-button {
-        font-size: 0.9rem;
+        font-size: 14.4px;
     }
 
     .project-1 .project-description {
-        top: 24rem;
+        top: 384px;
     }
     
     .project-2 .project-description {
-        top: 24rem;
+        top: 384px;
     }
     
     .project-3 .project-description {
-        top: 24rem;
+        top: 384px;
     }
 
     .project-button {
-    margin: 2rem 0.4rem;
+        margin: 32px 6.4px;
     }
 }
 
 @media only screen and (max-width: 400px) {
     #about-section {
-        padding-top: 7rem;
-        padding-bottom: 7rem;
+        padding-top: 112px;
+        padding-bottom: 112px;
         width: 100%;
     }
 
     h1 {
-        font-size: 2.9rem;
+        font-size: 46.4px;
     }
 
     #projects-section {
         width: 100%;
+    }
+
+    .contact-form-section {
+        margin: 0 10px;
     }
 
 }
