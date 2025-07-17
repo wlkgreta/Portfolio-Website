@@ -24,7 +24,7 @@
                 <div class="nav-items-container">
                     <a class="nav-link" href="#about-section">about</a>
                     <a class="nav-link" href="#projects-section">projects</a>
-                    <a class="nav-link" href="">resume</a>
+                    <a class="nav-link" href="/resources/pdfs/WhitneyGreta_Resume.pdf" type="application/pdf" target="_blank">resume</a>
                     <a class="nav-link" href="#contact-section">contact</a>
                     <a class="profile-figure" href="https://linkedin.com/in/whitney-greta" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a class="profile-figure" href="https://github.com/wlkgreta" target="_blank"><i class="fa-brands fa-github"></i></a></li>
@@ -51,8 +51,8 @@
                         <ul>
                             <li class="dropdown-item"><a href="#about-section">about</a></li>
                             <li class="dropdown-item"><a href="#projects-section">projects</a></li>
-                            <li class="dropdown-item"><a href="">resume</a></li>
-                            <li class="dropdown-item"><a href="mailto:wknightly22@gmail.com">contact</a></li>
+                            <li class="dropdown-item"><a href="" target="_blank">resume</a></li>
+                            <li class="dropdown-item"><a href="#contact-section">contact</a></li>
                             <div class="mobile-figures">
                                 <li><a class="profile-figure" href="https://linkedin.com/in/whitney-greta" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                                 <li><a class="profile-figure" href="https://github.com/wlkgreta" target="_blank"><i class="fa-brands fa-github"></i></a></li>
@@ -74,29 +74,33 @@
                     <button id="openModal" class="about-button">about me</button>
                     <div id="modal" class="modal">
                         <div class="modal-inner">
-                            <h1>Hi, I'm Whitney!</h1>
-                            <br>
-                            <p>
-                                I'm a front-end developer based in Des Moines, IA.
-                                <br>
-                                <br> 
-                                I previously worked in the craft beer industry for 10 years, most recently as a sales representative for a local brewery. My interest in coding actually began during the pandemic when I was working as an Account & Brand manager for another brewery and helped consult on their new website design. I was hooked.
-                                <br>
-                                <br>
-                                So at the start of 2024 I finally took the plunge and started taking classes on Codecademy. In early 2025, I earned my Front-End Engineer certificate and since then, I have been working on projects to continue learning and honing my skills. In addition to my love for puzzles and problem-solving, my experiences working in sales and brand management have given me a unique understanding when it comes to meeting client needs, including effective communication skills and a strong attention to detail.
-                                <br>
-                                <br> 
-                                In my free time, I enjoy doing puzzles with my husband while watching Survivor, playing video games, biking to breweries, and doing crosswords while cuddling with my cats.
-                            </p>
-                            <button id="closeModal">Close</button>
+                            <div class="modal-content">
+                                <div class="modal-text">
+                                    <p>
+                                        I'm a front-end developer based in Des Moines, IA.
+                                        <br>
+                                        <br>
+                                        I have previously worked in the craft beer industry for 10 years. My interest in coding actually began during the pandemic when I was working as an Account & Brand manager for a local brewery and helped consult on their new website design. I was hooked.
+                                        <br>
+                                        <br>
+                                        So at the start of 2024 I finally took the plunge and started taking classes on Codecademy. In early 2025, I earned my Front-End Engineer certificate and, since then, have been working on projects to continue learning and honing my skills. My experiences working in sales and brand management have also given me a unique understanding when it comes to meeting client needs, including effective communication skills and a strong attention to detail.
+                                        <br>
+                                        <br> 
+                                        In my free time, I enjoy doing puzzles with my husband while watching Survivor, playing video games, biking to breweries, and hanging out with our two cats.
+                                    </p>
+                                </div>
+                                <div class="modal-image">
+                                    <div class="modal-button-container">
+                                        <button id="closeModal">x</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button class="about-button"><a class="about-button" href="mailto:wknightly22@gmail.com">contact</a></button>
+                    <button class="about-button"><a class="about-button" href="#contact-section">contact</a></button>
                 </div>
-                <!--<div class="headshot-container">
-                    <img src="./resources/images/PNG2.png" alt="">
-                </div>-->
             </section>
+
         <!--PROJECTS SECTION-->
             <section id="projects-section">
                 <div class="projects-header">
@@ -105,26 +109,29 @@
                 <div class="projects-container">
                     <div class="project-wrapper project-1">
                         <div class="project-photo">
-                            <img src="./resources/images/gritty03.jpg" alt="">
+                            <img src="./resources/images/Embark1.png" alt="Logo for Embark Performance Training">
                         </div>
                         <div class="project-description">
                             <h2>Embark Performance Training</h2>
-                            <p>Description & Languages Used</p>
-                            <button class="project-button"><a class="project-button" href="" target="_blank">view code</a></button>
-                            <button class="project-button"><a class="project-button" href="" target="_blank">view site</a></button>
+                            <p>- In Development -<br>Designing and developing a multi-page website for a local small business</p>
+                            <p><em>HTML5, CSS, Sass, Bootstrap, Figma</em></p>
+                            <!--<button class="project-button"><a class="project-button" href="" target="_blank">view code</a></button>-->
+                            <button class="project-button"><a class="project-button" href="https://www.figma.com/design/KAXdhE20b0lIvXOVqSKDGH/Embark-Performance-Training?node-id=0-1&m=dev&t=nzRLeHM7Qosq86KG-1" target="_blank">view wireframes</a></button>
                         </div>
                     </div>
                     <div class="project-wrapper project-2">
                         <div class="project-photo">
-                            <img src="./resources/images/gritty03.jpg" alt="">
+                            <img src="./resources/images/jammming.png" alt="Screenshot of Jammming App">
                         </div>
                         <div class="project-description">
-                            <h2>Jammming Codecademy Project</h2>
-                            <p>Description & Languages Used</p>
-                            <button class="project-button"><a class="project-button" href="" target="_blank">view code</a></button>
-                            <button class="project-button"><a class="project-button" href="" target="_blank">view site</a></button>
+                            <h2>Jammming App</h2>
+                            <p>A React App that utilizes Spotify API allowing users to create a custom playlist, then save it to their Spotify account. Completed for Codecademy's coursework. </p>
+                            <p><em>HTML5, CSS, Javascript, React.js</em></p>
+                            <button class="project-button"><a class="project-button" href="https://github.com/wlkgreta/jammming" target="_blank">view github</a></button>
+                            <!--<button class="project-button"><a class="project-button" href="" target="_blank">view site</a></button>-->
                         </div>
                     </div>
+                    <!--
                     <div class="project-wrapper project-3">
                         <div class="project-photo">
                             <img src="./resources/images/gritty03.jpg" alt="">
@@ -135,6 +142,37 @@
                             <button class="project-button"><a class="project-button" href="" target="_blank">view code</a></button>
                             <button class="project-button"><a class="project-button" href="" target="_blank">view site</a></button>
                         </div>
+                    </div>
+                    -->
+                </div>
+            </section>
+
+        <!--CONTACT SECTION-->
+            <section id="contact-section">
+                <div class="contact-header">
+                    <h1>Get In Touch</h1>
+                    <h3>I'd love to hear from you! Fill out the form below or send me an email at wknightly22@gmail.com.</h3>
+                </div>
+ 
+                <div class="contact-form-section">
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/mrbkwybz" method="post">
+                            <input type="text" id="first-name" name="user_name" class="input first-name" placeholder="First Name" aria-label="First Name" required />
+
+                            <input type="text" id="last-name" name="user_name" class="input last-name" placeholder="Last Name" aria-label="Last Name" required />
+                            
+                            <br>
+
+                            <input type="email" id="mail" name="email" class="input email" placeholder="Email" aria-label="Email" required/>
+                            
+                            <br>
+
+                            <textarea id="msg" name="user_message" class="input message" placeholder="Message" aria-label="Message" required></textarea>
+
+                            <br>
+
+                            <input type="submit" value="send" class="submit" aria-label="Submit"/>
+                        </form>
                     </div>
                 </div>
             </section>
