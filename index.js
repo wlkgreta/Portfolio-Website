@@ -66,3 +66,10 @@
     closeBtn.addEventListener('click', () => {
         modal.classList.remove('open');
     })
+
+//CLEAR FORM AFTER SUBMISSION
+    window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+        form.reset();
+    }
+    }
