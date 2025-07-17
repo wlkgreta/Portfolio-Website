@@ -687,13 +687,13 @@ button.project-button:active {
 
     .modal-inner {
         width: 90%;
-        max-height: 80%;
+        max-height: 75%;
         overflow: auto;
     }
 
     .modal-content {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.5fr;
+        grid-template-rows: 0.75fr 1fr;
     }
 
     .modal-content p {
@@ -708,6 +708,19 @@ button.project-button:active {
         border-bottom: 4px solid black;
     }
 
+    .modal-button-container {
+        position: fixed;
+        width: 85%;
+    }
+
+    .modal-inner::-webkit-scrollbar {
+        width: 5px;
+        background-color: rgb(119, 118, 118);
+    }
+
+    .modal-inner::-webkit-scrollbar-thumb {
+        background-color: rgba(211, 211, 211, 0.822);
+    }
 
     .projects-container {
         flex-direction: column;
@@ -989,6 +1002,20 @@ button.project-button:active {
     .project-button {
         margin: 32px 6.4px;
     }
+
+    .contact-form {
+        padding-left: 0;
+        padding-right: 0;
+        width: 300px;
+    }
+
+    .input {
+        width: 280px;
+    }
+
+    .submit {
+        width: 312px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1004,10 +1031,6 @@ button.project-button:active {
 
     #projects-section {
         width: 100%;
-    }
-
-    .contact-form-section {
-        margin: 0 10px;
     }
 
 }
