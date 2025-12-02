@@ -38,11 +38,10 @@ p, h2 {
 /* DATA THEME COLOR SCHEMES */
 
 [data-theme="light"] {
-    /* General & Nav */
     --color-bg: rgb(243, 174, 0);
     --button-hover:  rgba(255, 255, 255, 0.5);
     --nav-bg-color: #8F00FF;
-    --nav-link-color: white;
+    --nav-link-color: white;;
     --nav-link-hover: rgb(235, 194, 91);
     --nav-border: 3px solid black;
     --nav-scroll-shadow: black;
@@ -54,17 +53,9 @@ p, h2 {
     --h1-shadow: 10px 4px 1px black;
     --text-stroke: 2px black;
     --h2-color: black;
-
-    /* About */
     --about-button: black ;
     --about-button-shadow: 4px 4px 1px rgb(231, 50, 50);
     --about-button-border: rgb(223, 77, 77);
-    --modal-button: rgb(243, 174, 0);
-    --modal-shadow: rgb(20, 20, 20);
-    --modal-picture: url('./resources/images/whitney_headshot.png');
-    --modal-border: black;
-
-    /* Projects */
     --projects-section-border: black;
     --projects-bg-color: rgb(223, 77, 77);
     --project-wrapper-bg-color: white;
@@ -76,65 +67,52 @@ p, h2 {
     --project-button-border: #029c9c;
     --project-button-shadow: 4px 4px 1px #027a7a;
     --project-button-hover: rgb(236, 209, 209);
-    --span-bg: rgb(243, 174, 0);
-
-    /* Contact */
     --contact-button: black;
     --contact-text: black;
-    --input-border: black;
-    --input-shadow: black;
-
     --footer-color: black;
+    --modal-button: rgb(243, 174, 0);
+    --modal-shadow: rgb(20, 20, 20);
+    --modal-picture: url('./resources/images/whitney_headshot.png');
+    --modal-border: black;
 }
 
 [data-theme="cyberpunk"] {
-    /* General & Nav */
     --color-bg:  #0b080c;
     --button-hover:  rgba(255, 255, 255, 0.1);
     --nav-bg-color: #520172;
     --nav-link-color: white;;
-    --nav-link-hover: #badf03;
+    --nav-link-hover: #defe47;
     --nav-border: 3px solid black;
     --nav-scroll-shadow:  black;
     --dropdown-bg: rgb(41, 167, 167);
     --dropdown-hover:   #8709b9;
     --prof-fig-color: #fefefe;;
-    --prof-fig-hover: #badf03;
+    --prof-fig-hover: #defe47;
     --h1-color: black;
-    --h1-shadow: none;
+    --h1-shadow: 4px 4px 1px #05d9e8;
     --text-stroke: 2px #05d9e8;
     --h2-color: white;
-
-    /* About */
     --about-button: white ;
-    --about-button-shadow: 4px 4px 1px rgb(153, 177, 36);
-    --about-button-border:  #badf03;
-    --modal-button: #badf03;
+    --about-button-shadow: 4px 4px 1px #a9c038;
+    --about-button-border:  #defe47;
+    --projects-section-border: #e2346b;
+    --projects-bg-color: #0b080c;
+    --project-wrapper-bg-color:white;
+    --project-wrapper-shadow: black;
+    --project-img-border:black;
+    --project-description: black;
+    --project-button: black ;
+    --project-wrapper-border: black;
+    --project-button-border: #FF10F0;
+    --project-button-shadow: 4px 4px 1px #d80fcb;
+    --project-button-hover: rgb(187, 187, 187);
+    --contact-button: white ;
+    --contact-text: white;
+    --footer-color: white;
+    --modal-button: #defe47;
     --modal-shadow:  #8709b9;
     --modal-picture: url('./resources/images/whitney_headshot_dark.png');
     --modal-border: black;
-
-    /* Projects */
-    --projects-section-border: rgb(119, 119, 119);
-    --projects-bg-color: #0b080c;
-    --project-wrapper-bg-color:white;
-    --project-wrapper-shadow: #e2346b;
-    --project-img-border:black;
-    --project-description: rgb(8, 3, 3);
-    --project-button: black ;
-    --project-wrapper-border: #e2346b;
-    --project-button-border: #8709b9;
-    --project-button-shadow: 4px 4px 1px #72089c;
-    --project-button-hover: rgba(0, 0, 0, 0.1);
-    --span-bg: #badf03;
-
-    /* Contact */
-    --contact-button: white ;
-    --contact-text: white;
-    --input-border:  #e2346b;
-    --input-shadow:  #e2346b;
-
-    --footer-color: white;
 }
 
 /* FONTS */
@@ -168,7 +146,7 @@ button {
     font-family: "Funnel Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     background-color: transparent;
     padding: 16px;
     cursor: pointer;
@@ -316,11 +294,11 @@ button:active {
   }
   
   input:checked + .slider {
-    background-color: #badf03;
+    background-color: #defe47;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #badf03;
+    box-shadow: 0 0 1px #defe47;
   }
   
   input:checked + .slider:before {
@@ -331,7 +309,7 @@ button:active {
   
   /* ROUNDED SLIDER */
   .slider.round {
-    border-radius: 15px;
+    border-radius: 34px;
   }
   
   .slider.round:before {
@@ -345,9 +323,10 @@ button:active {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     width: 100%;
     z-index: 2;
+    padding: 196px 0 240px 0;
     scroll-margin-top: 96px;
 }
 
@@ -422,7 +401,6 @@ button:active {
     border: 3px solid var(--modal-border);
     box-shadow: 10px 10px 1px var(--modal-shadow);
     line-height: 24px;
-    font-size: 1.1rem;
     width: 60%;
     height: auto;
 }
@@ -475,16 +453,16 @@ button:active {
     width: 100%;
     background-color: var(--projects-bg-color);
     padding: 48px 0 128px 0;
-    border-top: 3px solid var(--projects-section-border);
-    border-bottom: 3px solid var(--projects-section-border);
+    border-top: 2px solid var(--projects-section-border);
+    border-bottom: 2px solid var(--projects-section-border);
 }
 
 .projects-header {
-    padding-bottom: 20px;
+    padding-bottom: 64px;
     text-align: center;
 }
 
-/* Project Figures */
+/* PROJECT FIGURES */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -493,129 +471,50 @@ button:active {
     height: auto;
     width: 100%;
     padding: 0;
-    margin-top: 25px;
 }
 
 .project-wrapper {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    max-width: 480px;
     height: auto;
-    min-width: 35%;
-    max-width: 500px;
-    padding-top: 50px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 100px;
-    border: 3px solid var(--project-wrapper-border);
-    box-shadow: 10px 10px 1px var(--project-wrapper-shadow);
+    padding: 64px 16px 325px 16px;
     background-color: var(--project-wrapper-bg-color);
+    box-shadow: 5px 20px 30px 2px var(--project-wrapper-shadow);
+    border: 1px solid var(--project-wrapper-border);
+    margin: 0 10px;
 }
 
-.project-photos-container {
-    display: flex;
-    justify-content: right;
-    width: auto;
+.project-photo img {
     height: auto;
-    overflow: hidden;
-    margin-left: 2.5rem;
-}
-
-.project-photo-desktop {
-    width: 640px;
-    max-height: 360px;
-}
-
-.project-photo-desktop img {
-    width: 100%;
-    height: auto;
-    border: 5px solid var(--project-img-border);
-    border-bottom: 20px solid var(--project-img-border);
-    border-radius: 1%;
-}
-
-.project-photo-mobile {
-    max-height: 350px;
-    width: 170px;
-    padding-bottom: 60px;
-}
-
-.project-photo-mobile img {
-    width: 100%;
-    height: auto;
-    border: 5px solid var(--project-img-border);
-    border-radius: 25px;
-    position: relative;
-    right: 50px;
-    top: 40px;
+    width: 432px;
+    border: 3px solid var(--project-img-border);
 }
 
 .project-description {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 750px;
     font-family: "Funnel Sans", sans-serif;
     color: var(--project-description);
-    font-size: 1.2rem;
     text-align: center;
-    align-self: center;
+    max-width: 432px;
+}
+
+.project-description h2 {
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 .project-description p {
-    width: 80%;
-}
-
-.span-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    margin: 40px 0;
-}
-
-.project-description span {    
-    background-color: var(--span-bg);
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-.project-title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.project-title h2 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.project-buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
+    margin-top: 24px;
 }
 
 .project-button {
+    text-decoration: none;
     color: var(--project-button);
-    background-color: rgba(255, 255, 255, 0.5);
     border: 3px solid var(--project-button-border);
     box-shadow: var(--project-button-shadow);
     font-size: 1.1rem;
-    width: 325px;
-    margin-top: 0;
-}
-
-.project-button a {
-    padding: 5% 31%;
-    border: none;
-    box-shadow: none;
-    text-decoration: none;
-    background-color: transparent;
+    margin-top: 32px;
 }
 
 button.project-button:hover {
@@ -626,14 +525,49 @@ button.project-button:active {
     transition: 0.2s all linear;
 }
 
+.project-button a {
+    border: none;
+    box-shadow: none;
+}
+
 /* PROJECT 1 */
 .project-1 {
     display: flex;
+    transform: rotate(-5deg);
+    flex-shrink: 1;
+}
+
+.project-1 .project-description {
+    position: absolute;
+    z-index: 1;
+    top: 496px;
 }
 
 /* PROJECT 2 */
 .project-2 {
     display: flex;
+    transform: rotate(5deg);
+    flex-shrink: 1;
+}
+
+.project-2 .project-description {
+    position: absolute;
+    z-index: 1;
+    top: 496px;
+}
+
+/* PROJECT 3 */
+
+.project-3 {
+    display: flex;
+    transform: rotate(-5deg);
+    flex-shrink: 1;
+}
+
+.project-3 .project-description {
+    position: absolute;
+    z-index: 1;
+    top: 496px;
 }
 
 /* CONTACT */
@@ -650,7 +584,7 @@ button.project-button:active {
     max-width: 592px;
     justify-self: center;
     margin: 16px;
-    font-weight: 200;
+    font-weight: 500;
     color: var(--contact-text);
 }
 
@@ -674,8 +608,8 @@ button.project-button:active {
     margin: 12px;
     padding: 16px;
     width: 400px; 
-    border: 3px solid var(--input-border);
-    box-shadow: 4px 4px 1px var(--input-shadow);
+    border: 3px solid black;
+    box-shadow: 4px 4px 1px black;
 }
 
 .input::placeholder {
@@ -789,10 +723,19 @@ button.project-button:active {
     }
 
     .projects-container {
+        flex-direction: column;
         justify-content: center;
         text-align: center;
         height: auto;
         overflow: hidden;
+    }
+
+    .project-1 {
+        margin-top: 48px;
+    }
+
+    .project-3 {
+        margin-bottom: 80px;
     }
 
 }
@@ -946,12 +889,20 @@ button.project-button:active {
         padding: 16px;
     }
 
+    #about-section {
+        padding: 288px 0;
+    }
+
     .about-text h2 {
         margin: 16px 0;
     }
     
     #projects-section {
         padding-bottom: 16px;
+    }
+
+    .projects-container {
+        padding: 16px 0 80px 0;
     }
 
     .projects-header {
@@ -961,21 +912,41 @@ button.project-button:active {
     .projects-header h1 {
         margin: 0 16px;
     }
-
     .project-wrapper {
+        max-width: 400px;
         font-size: 1.1rem;
     }
-
+    
+    .project-photo img {
+        width: 352px;
+    }
+    
     .project-description {
-        margin: 0 10px;
+        max-width: 352px;
     }
 
     .project-button {
         font-size: 1.1rem;
     }
+
+    .project-1 .project-description {
+        top: 416px;
+    }
+    
+    .project-2 .project-description {
+        top: 416px;
+    }
+    
+    .project-3 .project-description {
+        top: 416px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
+    #about-section {
+        padding-top: 160px;
+        padding-bottom: 208px;
+    }
    
     .about-button {
         margin: 16px 8px;
@@ -1000,11 +971,36 @@ button.project-button:active {
     }
 
     .project-wrapper {
+        max-width: 368px;
         font-size: 14.4px;
+    }
+    
+    .project-photo img {
+        width: 320px;
+    }
+    
+    .project-description {
+        max-width: 320px;
     }
 
     .project-button {
         font-size: 14.4px;
+    }
+
+    .project-1 .project-description {
+        top: 384px;
+    }
+    
+    .project-2 .project-description {
+        top: 384px;
+    }
+    
+    .project-3 .project-description {
+        top: 384px;
+    }
+
+    .project-button {
+        margin: 32px 6.4px;
     }
 
     .contact-form {
@@ -1024,11 +1020,17 @@ button.project-button:active {
 
 @media only screen and (max-width: 400px) {
     #about-section {
+        padding-top: 112px;
+        padding-bottom: 112px;
         width: 100%;
     }
 
     h1 {
         font-size: 46.4px;
+    }
+
+    #projects-section {
+        width: 100%;
     }
 
 }
