@@ -69,7 +69,7 @@
 
 //CLEAR FORM AFTER SUBMISSION
     window.onbeforeunload = () => {
-    for(const form of document.getElementsByTagName('form')) {
-        form.reset();
-    }
+        for(const form of document.getElementsByTagName('form')) {
+            form.reset();
+        }
     }
