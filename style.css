@@ -100,9 +100,9 @@ p, h2 {
     --dropdown-hover:   #8709b9;
     --prof-fig-color: #fefefe;;
     --prof-fig-hover: #badf03;
-    --h1-color: black;
+    --h1-color: #013c41;
     --h1-shadow: none;
-    --text-stroke: 2px #05d9e8;
+    --text-stroke: 4px #05d9e8;
     --h2-color: white;
 
     /* About */
