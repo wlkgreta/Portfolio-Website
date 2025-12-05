@@ -61,7 +61,7 @@ p, h2 {
     --about-button-border: rgb(223, 77, 77);
     --modal-button: rgb(243, 174, 0);
     --modal-shadow: rgb(20, 20, 20);
-    --modal-picture: url('./resources/images/whitney_headshot.png');
+    --modal-picture: url('./resources/images/whitney_headshot.jpg');
     --modal-border: black;
 
     /* Projects */

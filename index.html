@@ -31,7 +31,7 @@
         <header>
             <nav id="nav" class="nav">
                 <div class="logo-container">
-                    <a href=#intro><img src="./resources/images/logo.png"></a>
+                    <a href=#intro><img src="./resources/images/logo.png" alt="WG Logo"></a>
                 </div>
                 <div class="nav-items-container">
                     <a class="nav-link" href="#about-section">about</a>
@@ -49,14 +49,14 @@
         <!--MOBILE NAV/HEADER-->
             <nav id="mobile-nav" class="mobile-nav">
                 <div class="mobile-logo-container">
-                    <a href=#intro><img src="./resources/images/logo.png"></a>
+                    <a href=#intro><img src="./resources/images/logo.png" alt="WG Logo"></a>
                 </div>
                 <div class="dropdown-container">
                     <label class="switch">
                         <input type="checkbox" id="mobile-data-theme-toggle">
                         <span class="slider round"></span>
                     </label>
-                    <button class="dropdown-icon">
+                    <button class="dropdown-icon" aria-label="Dropdown Menu Icon">
                         <i class="fa-solid fa-bars fa-2xl" style="color: #f4f6f0;"></i>
                     </button>
                     <div class="dropdown-content">
@@ -83,7 +83,7 @@
                         <h1>Whitney Greta</h1>
                         <h2>Front-End Developer</h2>
                     </div>
-                    <button id="openModal" class="about-button">about me</button>
+                    <button id="openModal" class="about-button" aria-label="Open About Me Modal">about me</button>
                     <div id="modal" class="modal">
                         <div class="modal-inner">
                             <div class="modal-content">
@@ -103,13 +103,13 @@
                                 </div>
                                 <div class="modal-image">
                                     <div class="modal-button-container">
-                                        <button id="closeModal">x</button>
+                                        <button id="closeModal" aria-label="Close Modal">x</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="about-button"><a class="about-button" href="#contact-section">contact</a></button>
+                    <button class="about-button" aria-label="Jump to Contact Form"><a class="about-button" href="#contact-section">contact</a></button>
                 </div>
             </section>
 
@@ -123,10 +123,10 @@
                     <div class="project-wrapper project-1">
                         <div class="project-photos-container">
                             <div class="project-photo-desktop">
-                                <img src="./resources/images/Embark Performance Desktop.png" alt="">
+                                <img src="./resources/images/Embark Performance Desktop.jpg" alt="Screenshot of the Embark Performance Training website on a desktop screen">
                             </div>
                             <div class="project-photo-mobile">
-                                <img src="./resources/images/Embark Performance Mobile.png" alt="">
+                                <img src="./resources/images/Embark Performance Mobile.jpg" alt="Screenshot of the Embark Performance Training website on a mobile screen">
                             </div>
                         </div>
                         <div class="project-description">
@@ -138,8 +138,8 @@
                                 <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Sass</span><span>Bootstrap</span>
                             </div>
                             <div class="project-buttons-container">
-                                <button class="project-button" href="https://github.com/wlkgreta/embark-performance-training" target="_blank"><a class="project-button" href="https://github.com/wlkgreta/embark-performance-training" target="_blank">view code</a></button>
-                                <button class="project-button"><a class="project-button" href="https://wlkgreta.github.io/embark-performance-training/" target="_blank">view site</a></button>
+                                <button class="project-button" href="https://github.com/wlkgreta/embark-performance-training" target="_blank"><a class="project-button" href="https://github.com/wlkgreta/embark-performance-training" target="_blank" aria-label="View Code on Github Page">view code</a></button>
+                                <button class="project-button"><a class="project-button" href="https://wlkgreta.github.io/embark-performance-training/" target="_blank" aria-label="View Embark Performance Training Website">view site</a></button>
                             </div>
                         </div>
                     </div>
