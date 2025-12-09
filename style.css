@@ -386,13 +386,19 @@ button:active {
     color: var(--about-button);
     box-shadow: var(--about-button-shadow);
     border: 3px solid var(--about-button-border);
+    max-width: 800px;
+    padding: 0;
+    height: 65px;
 }
 
 
 .about-button a {
     border: none;
     box-shadow: none;
-    padding: 0 35%;
+    display: block;
+    align-content: center;
+    max-width: 800px;
+    height: 60px;
 }
 
 /* MODAL */
