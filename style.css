@@ -928,8 +928,14 @@ button.project-button:active {
     }
 
     .mobile-figures {
-        display: inline-flex;
+        display: inline-flex !important;
+        justify-content: center;
+        width: 100%;
         padding: 0;
+    }
+
+    .mobile-figures li {
+        width: 15%;
     }
 
     .profile-figure i:hover {
