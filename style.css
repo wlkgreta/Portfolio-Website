@@ -994,6 +994,11 @@ button.project-button:active {
         font-size: 16px;
     }
 
+    .about-button a {
+        position: relative;
+        bottom: 16px;
+    }
+
     h1 {
         font-size: 56px;
     }
