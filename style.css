@@ -115,7 +115,7 @@ p, h2 {
     --modal-border: black;
 
     /* Projects */
-    --projects-section-border: rgb(119, 119, 119);
+    --projects-section-border: #0b080c;
     --projects-bg-color: #0b080c;
     --project-wrapper-bg-color:white;
     --project-wrapper-shadow: #e2346b;
