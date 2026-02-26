@@ -4,7 +4,7 @@ Personal portfolio site completed for Codecademy's Front-End Engineer Career Pat
 ## Description
 
 ### Project Objectives:
-+ Build a website using HTML, CSS
++ Build a website using HTML, CSS, and JavaScript
 + Add at least one interactive feature using JavaScript
 + Use Git version control
 + Use the command line and file navigation
