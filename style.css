@@ -331,7 +331,7 @@ button:active {
   
   /* ROUNDED SLIDER */
   .slider.round {
-    border-radius: 15px;
+    border-radius: 25px;
   }
   
   .slider.round:before {
